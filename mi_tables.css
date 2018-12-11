@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 6
+   Case Problem 1
+
+   Tables Style Sheet
+   Author: Connor J Webdale 
+   Date: 12.11.18 
+
+   Filename:         mi_tables.css
+
+*/
+
+/* Table Styles */
+/*Gives the table a linear background from blue to black and a gray border of 5 pixels. */
+table#pricing {
+    background: linear-gradient(rgb(190, 215, 255), black);
+    border: 5px solid gray;
+}
+
+/*For every th and td in the table, gives a 3 pixel gray border, sets line height to 1.4 em, and sets padding space to 8 pixels. */
+table#pricing th,
+table#pricing td {
+    border: 3px solid gray;
+    line-height: 1.4em;
+    padding: 8px;
+}
+
+/*For every th, sets the background color toblack, sets the font color to light blue, and sets the font weight to normal. */
+th {
+    background-color: black;
+    color: rgb(130, 210, 255);
+    font-weight: normal;
+}
+
+/*For every td element, sets the text color to white, font size to 0.9 em, and aligns the text to the top of the cell. */
+td {
+    color: white;
+    font-size: 0.9em;
+    text-align: top;
+}
+
+/* Column Styles */
+/*Sets col elements with the id of 'firstCol' to a width of 24%. */
+col#firstCol {
+    width: 24%;
+}
+
+/*Sets col elements with the class name 'dataCols' to a width of 19%. */
+col.dataCols {
+    width: 19%;
+}
+
+/* Table Header Styles */
+/*Created a style rules for the table header row group including every row within that row group that sets the row height to 60 pixels. */
+thead tr {
+    height: 60px;
+}
+
+/*Sets the first th elements in the first row of the table header to a font-size of 2 em. */
+thead tr:nth-of-type(1) th:nth-of-type(1) {
+    font-size: 2em;
+}
+
+/*For th elements in the first row of the table header row group that a not the first heading cell, changes the background-color to transparent and the font color to black. */
+thead tr:nth-of-type(1) th:not(:first-of-type) {
+    background-color: transparent;
+    color: black;
+}
